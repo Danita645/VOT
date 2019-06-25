@@ -1,0 +1,185 @@
+   /* ==============================
+		Design Notes
+		Brown title & p text #1a0d00
+		Pale aqua nav text #c2d6d6
+		Background  #flflda
+   	  ============================== */
+	
+	* {
+	margin: 0;
+}
+
+	body {
+	font-family:  Helvetica Neue, tahoma;
+	background-image: url("cw_images/kevin_wolf_890x1187.png"); 
+	margin-top: 0;
+	background-position: center;
+	background-size: cover; 
+}
+
+	.pane {
+		width: 100%;
+		/* full height of screen minus header, minus footer */
+		height: calc(100vh - 75px - 40px);
+		padding: 50px;
+		box-sizing: border-box;
+		overflow-x: scroll;
+		position: relative;
+		/* background-color: yellow;  for test purposes */
+}
+	.timeline {
+		height: 100%;
+		width: 4000px;
+		position: relative;
+		/* background-color: green;  f-or test purposes */
+	}
+
+	/* ===========================================
+	Title, Navigation, Img: Allesandra Caretto
+	=============================================  */
+	header {
+	width: 100%;  
+	position: relative;
+	height: 75px;
+}
+	#page_title {
+	padding: 50px;
+	color: #c2d6d6;
+	text-shadow: 1px 2px #1a0d00;
+	}	
+	
+    /*navigation bar*/
+    .nav {
+    margin-top: 0px;
+    margin-left: 18px;
+    padding: 14px;
+}
+    @media (min-width: 480px) {
+		header {
+			display: flex;
+		}
+		.nav {
+			display: flex;
+		}
+	}
+    /* navigation line*/
+    li {
+    margin-top: 0;
+	padding: 6px;
+	text-shadow: 1px 2px #1a0d00;
+	list-style-type: none; 
+}
+ 
+    /*text in navigation bar*/
+	.nav a {
+	margin-top: 0;
+	color: #c2d6d6;
+	font-size: 22px;
+	text-decoration: none;
+	}
+     /* title: Voices Of Time */
+	#title_block {
+	margin-top: 0;
+	position: absolute;
+	top: 40px;
+	left: 30%;
+	color: #c2d6d6;
+	font-size: 25px;
+	text-shadow: 2px 2px #1a0d00	 
+}
+ 	 
+
+	#paragraphs {
+	position: absolute;
+	top: 600px;
+	}
+
+	hr {height: .3em; 
+	border-color: #c2d6d6;
+	border-style: solid;
+	background-color: #c2d6d6;  shows pop-up text area 
+}
+
+	/* ==========================
+	        Popup container section
+	=============================*/
+
+	section {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.popup {
+		flex-direction: row;
+		position: relative;
+		cursor: pointer;
+		background-color: #c2d6d6;
+		padding: 3px 9px 6px 6px;
+}
+
+	/* the actual popup*/
+ 	.popup .popuptext {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+ 		visibility: hidden;
+		width: 300px;
+		color: red;	
+		border-radius: 66px;
+		position: absolute;
+ 		z-index: 1;
+}
+ 
+	.popuptext {
+	font-size: 1.15em;
+	margin-top: 2px;
+	margin-left: 300px;
+	}
+
+ 	/*popup arrow 
+ 		.popup .popuptext::after {
+		flex-direction: row;
+ 		content: "";
+ 		position: absolute;
+ 		top: 80%;
+ 		left: 50%;
+ 		margin-left: -15px;
+ 		border-width: 5px;
+ 		border-style: solid;
+ }*/
+	 
+ 	 /*Toggle this when clicking*/
+ 		 
+ 	.popup .show {
+ 		visibility: visible;
+ 		-webkit-animation: fadeIn 1s;
+ 		animation: fadeIn 1s;
+}	
+ 	
+ 	/* Add animation (fade in popup)*/
+ 		@-webkit-keyframes fadeIn {
+ 		from {opacity: 0;}
+ 		to {opacity: 1;}
+}
+ 	
+ 	 @keyframes fadeIn {
+ 	 	from {opacity: 0;}
+ 	 	to {opacity: 1;}
+}
+
+
+/* ==================================
+	footer styles
+	=============================== */
+ 	 footer {
+		display: flex;
+		justify-content: center;
+ 	 	/*margin: 0px 0px 4px 0px; */
+		height: 6px;
+		background-color: #509c9c;	
+}
+	 
+    /*=======================
+	Media Queries for larger screens
+	========================*/
+	
