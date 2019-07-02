@@ -10,7 +10,7 @@
 }
 
 	body {
-	font-family:  Helvetica Neue, tahoma;
+	font-family:  "Helvetica Neue", tahoma;
 	background-image: url("cw_images/kevin_wolf_890x1187.png"); 
 	margin-top: 0;
 	background-position: center;
@@ -25,17 +25,17 @@
 		box-sizing: border-box;
 		overflow-x: scroll;
 		position: relative;
-		/* background-color: yellow;  for test purposes */
+	/*	background-color: black; */
 }
 	.timeline {
 		height: 100%;
 		width: 4000px;
 		position: relative;
-		/* background-color: green;  f-or test purposes */
-	}
+		/* background-color: green;  for test purposes */
+}
 
 	/* ===========================================
-	Title, Navigation, Img: Allesandra Caretto
+	Title, Navigation
 	=============================================  */
 	header {
 	width: 100%;  
@@ -43,15 +43,17 @@
 	height: 75px;
 }
 	#page_title {
-	padding: 50px;
+	font-size: 25px;
+	margin-left: 45px;
+	padding: 25px;
 	color: #c2d6d6;
 	text-shadow: 1px 2px #1a0d00;
-	}	
+}	
 	
     /*navigation bar*/
     .nav {
     margin-top: 0px;
-    margin-left: 18px;
+    margin-left: 25px;
     padding: 14px;
 }
     @media (min-width: 480px) {
@@ -61,22 +63,26 @@
 		.nav {
 			display: flex;
 		}
-	}
+}
+
     /* navigation line*/
     li {
     margin-top: 0;
 	padding: 6px;
-	text-shadow: 1px 2px #1a0d00;
+	text-shadow: 2px 2px #1a0d00;
 	list-style-type: none; 
 }
  
-    /*text in navigation bar*/
+	/*text in navigation bar*/
+	
 	.nav a {
 	margin-top: 0;
+	padding-left: 50px;
 	color: #c2d6d6;
-	font-size: 22px;
+	font-size: 25px;
 	text-decoration: none;
-	}
+}
+
      /* title: Voices Of Time */
 	#title_block {
 	margin-top: 0;
@@ -88,16 +94,14 @@
 	text-shadow: 2px 2px #1a0d00	 
 }
  	 
-
 	#paragraphs {
 	position: absolute;
 	top: 600px;
-	}
+}
 
 	hr {height: .3em; 
-	border-color: #c2d6d6;
 	border-style: solid;
-	background-color: #c2d6d6;  shows pop-up text area 
+	background-color: #c2d6d6;  /*shows pop-up text area */
 }
 
 	/* ==========================
@@ -108,77 +112,102 @@
 		display: flex;
 		flex-direction: row;
 	}
-
+ /* =======================================
+	This controls the horizontal popup area
+	=======================================  */
 	.popup {
 		flex-direction: row;
 		position: relative;
 		cursor: pointer;
-		background-color: #c2d6d6;
+		/* background-color: #c2d6d6;  */
 		padding: 3px 9px 6px 6px;
 }
 
-	/* the actual popup*/
+	/* the actual popup, text, and font, */
+
  	.popup .popuptext {
-		display: flex;
+		display: flex;  
 		flex-direction: row;
-		justify-content: center;
+		 justify-content: center;
  		visibility: hidden;
-		width: 300px;
-		color: red;	
-		border-radius: 66px;
+		width: 325px;
+		 color: #ffffe6;	 
+		font-family: "Comic Sans MS";
+	 	border-radius: 66px; 
 		position: absolute;
- 		z-index: 1;
+		z-index: 1;				
 }
  
-	.popuptext {
-	font-size: 1.15em;
-	margin-top: 2px;
-	margin-left: 300px;
-	}
-
- 	/*popup arrow 
- 		.popup .popuptext::after {
-		flex-direction: row;
- 		content: "";
- 		position: absolute;
- 		top: 80%;
- 		left: 50%;
- 		margin-left: -15px;
- 		border-width: 5px;
- 		border-style: solid;
- }*/
-	 
- 	 /*Toggle this when clicking*/
+ 	.popuptext {
+		font-size: 1.2em;
+		margin-top: 2px;
+		margin-left: 400px;  
+} 
  		 
  	.popup .show {
- 		visibility: visible;
+		 visibility: visible;
  		-webkit-animation: fadeIn 1s;
  		animation: fadeIn 1s;
 }	
- 	
- 	/* Add animation (fade in popup)*/
+
+	 /* ===========================
+	 Add animation (fade in popup & fade out)
+	 ===============================*/
  		@-webkit-keyframes fadeIn {
  		from {opacity: 0;}
  		to {opacity: 1;}
 }
  	
- 	 @keyframes fadeIn {
+ 	 	@keyframes fadeIn {
  	 	from {opacity: 0;}
  	 	to {opacity: 1;}
 }
+/*
+		@-webkit-keyframes fadeOut {
+		0% {opacity: 1;}
+		100% {opacity: 0;}
+}
+
+		@keyframes fadeOut {
+		0% {opacity: 1;}
+		100% {opacity: 0;}
+}
+*/
 
 
+/* ================================
+	This pseudo class makes text higher.
+=====================================*/
+.highertext {
+	margin-top: 2px;
+	margin-top: 25px;
+	margin-left: 300px;  
+ }
+ 
 /* ==================================
 	footer styles
 	=============================== */
  	 footer {
 		display: flex;
+		flex-direction: row;
 		justify-content: center;
- 	 	/*margin: 0px 0px 4px 0px; */
-		height: 6px;
+ 	 	margin: 1px 0px -2px 0px; 
+		height: 30px;
 		background-color: #509c9c;	
 }
-	 
+
+	footer li {
+		display: inline;
+}
+
+	 footer a{
+		 color: #00001a;
+		 text-shadow: none;
+	/*	 text-decoration: none; */
+		 font-size: 18px;
+		 margin-top: 0px;
+		 margin-bottom: 2px;
+}
     /*=======================
 	Media Queries for larger screens
 	========================*/
