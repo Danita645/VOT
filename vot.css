@@ -1,188 +1,126 @@
    /* ==============================
 		Design Notes
-		Brown title & p text #1a0d00
-		Pale aqua nav text #c2d6d6
-		Background  #flflda
+		
+		Title and Nav text Pale aqua  #c2d6d6
+		Text Shadow  #664d00
    	  ============================== */
 	
 	* {
-	margin: 0;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
 }
 
 	body {
-	font-family:  "Helvetica Neue", tahoma;
-	background-image: url("cw_images/kevin_wolf_890x1187.png"); 
-	margin-top: 0;
-	background-position: center;
-	background-size: cover; 
+		font-family:  "Helvetica Neue", tahoma;
+		background-color: black; 	
 }
 
-	.pane {
-		width: 100%;
-		/* full height of screen minus header, minus footer */
-		height: calc(100vh - 75px - 40px);
-		padding: 50px;
-		box-sizing: border-box;
-		overflow-x: scroll;
-		position: relative;
-	/*	background-color: black; */
-}
-	.timeline {
-		height: 100%;
-		width: 4000px;
-		position: relative;
-		/* background-color: green;  for test purposes */
-}
+	.lifelines_header {
+		font-family:  "Helvetica Neue", tahoma;
+		background-color: #006699; 	
 
+		}
 	/* ===========================================
 	Title, Navigation
-	=============================================  */
-	header {
-	width: 100%;  
-	position: relative;
-	height: 75px;
+	======================================= */
+
+	header,
+	.lifelines_header {
+		width: 100%;  
+		position: relative;
+		height: 75px;
 }
-	#page_title {
-	font-size: 25px;
-	margin-left: 45px;
-	padding: 25px;
-	color: #c2d6d6;
-	text-shadow: 1px 2px #1a0d00;
-}	
 	
-    /*navigation bar*/
-    .nav {
-    margin-top: 0px;
-    margin-left: 25px;
-    padding: 14px;
-}
-    @media (min-width: 480px) {
-		header {
-			display: flex;
-		}
-		.nav {
-			display: flex;
-		}
+    /* Navigation bar */
+	.nav,
+	.lifelines_nav {
+		font-size: 15px;
+		color: #c2d6d6;
+		justify-content: flex-end;
+   	 	margin-left: 25px;
 }
 
-    /* navigation line*/
-    li {
-    margin-top: 0;
-	padding: 6px;
-	text-shadow: 2px 2px #1a0d00;
-	list-style-type: none; 
+	/* Navigation line*/
+	
+	li {
+		list-style-type: none; 
+		padding-left: 14px;
+		padding-bottom: 10px;
+		
 }
  
-	/*text in navigation bar*/
+	/* Navigation text */
 	
 	.nav a {
-	margin-top: 0;
-	padding-left: 50px;
-	color: #c2d6d6;
-	font-size: 25px;
-	text-decoration: none;
+		margin-top: 0;
+		color: #ffffe6;
+		font-size: 15px;
+		text-decoration: none;
 }
 
-     /* title: Voices Of Time */
-	#title_block {
-	margin-top: 0;
-	position: absolute;
-	top: 40px;
-	left: 30%;
-	color: #c2d6d6;
-	font-size: 25px;
-	text-shadow: 2px 2px #1a0d00	 
+	
+/*===========================
+	Viewport and Timeline	
+============================= */
+	.viewport {
+		width: 100%;
+	/* full screen height minus header, minus footer */
+		height: calc(100vh - 75px - 40px);
+		padding: 45px;
+		overflow-x: scroll;
+		position: relative;	
+		background-position: center;
+		background-size: cover; 
+		
 }
- 	 
+	.timeline {
+	  	height: 100%;
+		width: 4000px;
+		position: relative;			
+}
+
 	#paragraphs {
-	position: absolute;
-	top: 600px;
-}
-
-	hr {height: .3em; 
-	border-style: solid;
-	background-color: #c2d6d6;  /*shows pop-up text area */
-}
-
-	/* ==========================
-	        Popup container section
-	=============================*/
-
-	section {
-		display: flex;
-		flex-direction: row;
-	}
- /* =======================================
-	This controls the horizontal popup area
-	=======================================  */
-	.popup {
-		flex-direction: row;
-		position: relative;
-		cursor: pointer;
-		/* background-color: #c2d6d6;  */
-		padding: 3px 9px 6px 6px;
-}
-
-	/* the actual popup, text, and font, */
-
- 	.popup .popuptext {
-		display: flex;  
-		flex-direction: row;
-		 justify-content: center;
- 		visibility: hidden;
-		width: 325px;
-		 color: #ffffe6;	 
-		font-family: "Comic Sans MS";
-	 	border-radius: 66px; 
 		position: absolute;
-		z-index: 1;				
+		top: 600px;
 }
+
+/* ==================================
+	New CSS class names for popup items
+	================================ */
+
+	.timeline-text {
+	/*	color: #c2d6d6;*/
+	color: #ffffe6;
+}
+
+/* ================================= 
+  Text is not visible on page load - see opacity.
+    ============================ */
+	.timeline-item {
+ 		width: 300px;
+  		padding: 12px 20px;
+  		position: absolute;
+		background-color: rgb(38, 77, 115, 0.83);  
+		border-radius: 25px;
+		opacity: 0;
+}
+
+ /* Text fades in with animate/transition. */
+	.fade-in {
+  		opacity: 1.0;
+  		transition: opacity 250ms ease-in;
+}
+
+ /* ===================================
+	Fade out - always after fade-in-
+ 	=================================== */
+	.fade-out {
+  		opacity: 0;
+  		transition: opacity 250ms ease-out;
+}
+
  
- 	.popuptext {
-		font-size: 1.2em;
-		margin-top: 2px;
-		margin-left: 400px;  
-} 
- 		 
- 	.popup .show {
-		 visibility: visible;
- 		-webkit-animation: fadeIn 1s;
- 		animation: fadeIn 1s;
-}	
-
-	 /* ===========================
-	 Add animation (fade in popup & fade out)
-	 ===============================*/
- 		@-webkit-keyframes fadeIn {
- 		from {opacity: 0;}
- 		to {opacity: 1;}
-}
- 	
- 	 	@keyframes fadeIn {
- 	 	from {opacity: 0;}
- 	 	to {opacity: 1;}
-}
-/*
-		@-webkit-keyframes fadeOut {
-		0% {opacity: 1;}
-		100% {opacity: 0;}
-}
-
-		@keyframes fadeOut {
-		0% {opacity: 1;}
-		100% {opacity: 0;}
-}
-*/
-
-
-/* ================================
-	This pseudo class makes text higher.
-=====================================*/
-.highertext {
-	margin-top: 2px;
-	margin-top: 25px;
-	margin-left: 300px;  
- }
  
 /* ==================================
 	footer styles
@@ -210,5 +148,38 @@
 }
     /*=======================
 	Media Queries for larger screens
+	are nav-row, text shadow, font-size
 	========================*/
 	
+	@media (min-width: 502px) {
+		header {
+			display: flex;
+		}
+
+		.lifelines_header {
+			display: flex;
+		}
+
+		
+
+		.nav,
+		.lifelines_nav {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+    		margin-top: 0px;
+    		padding-left: 25px;
+		}
+		.nav li,  
+		.lifelines_nav {
+			font-size: 25px;
+			padding-left: 35px;
+			text-shadow: 2px 2px #664d00;
+		}
+
+		.nav a, 
+		.lifelines_nav a {
+			font-size: 25px;
+			color: #c2d6d6;
+		}
+}
