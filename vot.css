@@ -61,6 +61,17 @@
 		text-decoration: none;
 }
 
+	h4 {
+		color: white;
+		padding: 20px 40px;
+		width: 225px;
+	}
+
+	#lifelines {
+		width: 227px;
+		padding: 15px;
+		color: green;
+	}
 	
 /*===========================
 	Viewport and Timeline	
@@ -213,5 +224,17 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 		.timeline-item {
 			width: 325px;
 			
-   }
+   		}
+
+   		h4 {
+		   width: 500px;
+	   }
+
+	   	#lifelines {
+			   color: blue;
+			   width: 800px;
+			   font-size: 1.5em;
+			   padding: 60px; 40px;
+		   }
+	   
 }
