@@ -1,7 +1,8 @@
    /* ==============================
 		Design Notes
 		
-		Title and Nav text Pale aqua  #c2d6d6
+		Title-Nav-text lg Pale aqua  #c2d6d6
+		title-nav small text ffffe6
 		Text Shadow  #664d00
    	  ============================== */
 	
@@ -45,6 +46,7 @@
 	
 	li {
 		list-style-type: none; 
+		padding-top: 10px;
 		padding-left: 14px;
 		padding-bottom: 10px;
 		
@@ -55,7 +57,7 @@
 	.nav a {
 		margin-top: 0;
 		color: #ffffe6;
-		font-size: 15px;
+		font-size: 18px;
 		text-decoration: none;
 }
 
@@ -71,9 +73,9 @@
 		overflow-x: scroll;
 		position: relative;	
 		background-position: center;
-		background-size: cover; 
-		
+		background-size: cover; 		
 }
+	 
 	.timeline {
 	  	height: 100%;
 		width: 4000px;
@@ -105,21 +107,49 @@
 		border-radius: 25px;
 		opacity: 0;
 }
+ /* ===========================
+ 		Text background styles 
+ ============================== */
+	#gen-1-11  {
+		background-color:rgb(153, 230, 0, 0.65);	 
+}
+
+
+	#gen-1-11 p {
+		color: brown;
+}
+
+	#gen-1-14 {
+		background-color: rgb(0, 77, 77, 0.60);
+		width: 255px;
+}
+	
 
  /* Text fades in with animate/transition. */
 	.fade-in {
   		opacity: 1.0;
-  		transition: opacity 250ms ease-in;
+		transition: opacity 250ms ease-in;
+		transition: 2.3s;
 }
 
  /* ===================================
 	Fade out - always after fade-in-
  	=================================== */
 	.fade-out {
-  		opacity: 0;
-  		transition: opacity 250ms ease-out;
+		opacity: 0;
+		transition: 2.1s;
+		transition: opacity 250ms ease-out;		
 }
 
+/* =======================================
+Viewport selector was added to fade-in images. It is a work-in-progress.
+
+==========================================  */
+ 	.viewport {
+		opacity: 0.8;
+		transition: 3.2s;
+
+	}
  
  
 /* ==================================
@@ -159,8 +189,6 @@
 		.lifelines_header {
 			display: flex;
 		}
-
-		
 
 		.nav,
 		.lifelines_nav {
