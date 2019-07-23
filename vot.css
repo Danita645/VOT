@@ -100,8 +100,8 @@
   Text is not visible on page load - see opacity.
     ============================ */
 	.timeline-item {
- 		width: 300px;
-  		padding: 12px 20px;
+ 		width: 225px;
+  		padding: 12px 15px;
   		position: absolute;
 		background-color: rgb(38, 77, 115, 0.83);  
 		border-radius: 25px;
@@ -121,7 +121,6 @@
 
 	#gen-1-14 {
 		background-color: rgb(0, 77, 77, 0.60);
-		width: 255px;
 }
 	
 
@@ -210,4 +209,9 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 			font-size: 25px;
 			color: #c2d6d6;
 		}
+
+		.timeline-item {
+			width: 325px;
+			
+   }
 }

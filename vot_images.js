@@ -46,7 +46,7 @@ const timelineImages = [
 ]
 
 /*   ===========================================  
-    Timeline and viewport divs are not inside functions
+    Timeline and viewport divs are defined in vot.js file
      ==========================================   */
 
     // const viewportDiv = document.getElementById
@@ -55,12 +55,14 @@ const timelineImages = [
     // ('js-timeline');
 
     /* =========================================== 
-        An iterative map array of timeline images attached to the viewport's scroll event listener. Images fade in and out.
+        Custom javascript attached to the viewport's scroll event listener make images fade in and out.
 
         Notes:  https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
        ===========================================   */
 
     viewportDiv.addEventListener('scroll', function() {
+      
+ /* Track the scroll position of the viewport */
 
  const scrollPosition = viewportDiv.scrollLeft;
 
@@ -68,19 +70,19 @@ const timelineImages = [
 timelineImages.map(function(item) {
    const thisImage = document.getElementById(item.id);
 
-   if (scrollPosition > item.x1 && scrollPosition <= item.x2) { thisImage.classList.add('fade-in');
-   viewportDiv.setAttribute
-   ("style", `background-image: url("${item.imgUrl}"); `); 
-};
+   if (scrollPosition > item.x1 && scrollPosition <= item.x2) { 
+    thisImage.classList.add('fade-in');
+    viewportDiv.setAttribute("style", `background-image: url("${item.imgUrl}"); `); 
+    };
 
-//Does that semicolon 2^^ belong there?
+
      // Dynamic conditionals for each item 
 
 
      if (scrollPosition > item.x2) {
         thisImage.classList.add('fade-out');
       };
-  //my code below
+  
   
       if (scrollPosition >= item.x2){
         setTimeout(function(){
@@ -133,9 +135,6 @@ timelineImages.map(function(item) {
   
       /*
         Append the HTML block to the timeline div.
-        I'm using insertAdjacentHTML rather than innerHTML.
-        This is doing the same thing we were doing before with
-        "innerHTML+=..." but it's just better for performance.
   
         See more here:
         https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
@@ -147,13 +146,7 @@ timelineImages.map(function(item) {
 
   $("#viewport").delay(6000).animate({"opacity": "1"}, 1700); 
 
-  /*
-    This is where the function is called to build the timeline HTML.
-    Note that this is better than the onload we were doing before
-    with the body tag because as long as the <script> call is
-    at the end of the page directly before the closing </body>
-    tag this will execute without error.
-  */
+  
   buildTimeline();
   
   

@@ -41,7 +41,7 @@ const timelineItems = [
     text: "Then God said, 'Let there be light in the expanse of the heavens to separate the day from the night ...' a fourth day. <br>Gen 1-14'",
     x1: 1600,
     x2: 1900,
-    y: 25
+    y: 195
   },
 
 ]
@@ -57,7 +57,7 @@ const timelineItems = [
 /* =======================
   TIMELINE DYNAMIC DISPLAY
   ========================
-  Iterate through a map array of timeline items (attached to the viewport's scroll event listener). They fade in and out.  
+  This is a custom scroll event listener that makes text fade in and out based on scroll position in viewport.  
  
   Notes:
   https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
@@ -118,7 +118,7 @@ if (scrollPosition > 1900) {
   BUILD TIMELINE HTML
   
   Main function to generate the HTML for each item
-  in our timelineItems array.
+  in our timelineItems array by iterating over an array.
   =================== */
 function buildTimeline() {
   timelineItems.map(function(item) {
