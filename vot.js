@@ -1,13 +1,14 @@
 // Timeline items
 const timelineItems = [
   {
-    id: "gen-1-1",
+    textID: "gen-1-1",
+    imgID: "image-gen-1-2",
+    imgUrl:  "cw_images/genesis_bible.jpeg", 
     text: "In the beginning, God created the heavens and the earth.<br> Gen: 1-1",
     x1: 100,
     x2: 350,
     y: 25,
   },
-
   {
     id: "gen-1-2",
     text: "The earth was without form and void, and darkness was over the surface of the deep. <br>Gen: 1-2",
