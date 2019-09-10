@@ -6,41 +6,82 @@
    
 const timelineImages = [
   {
-    //this goes with 
+    /*=================================
+     this is the book-fire image onload. 
+     It must preceed the sequence and load 
+     on page-load. Then fade with the others.
+    ====================================   */
+    //onpageload
+    id: "on_page_load",
+    imgUrl: "cw_images/vot_opening.jpeg",
+    x1: 1,
+    x2: 200,
+    y: 40,
+  },
+  {//gen-1-1
+    id: "image-gen-1-1",
+    imgUrl: "cw_images/david_jorre_unsplash.jpg",
+    x1: 200,
+    x2: 400,
+    y:40,
+  },
+  {
     id: "image-gen-1-2",
     imgUrl:  "cw_images/genesis_bible.jpeg", 
-    x1: 350,
-    x2: 750,
+    x1: 400,
+    x2: 600,
     y: 40,
   },
 
   { 
-      id: "image-gen-1-2", 
+      id: "image-gen-1-3", 
       imgUrl: "cw_images/gen_1_2.jpeg",
-      x1: 751,
-      x2: 1050,
+      x1: 600,
+      x2: 800,
       y: 40,
     },
 
     { 
         id: "image-gen-1-8", 
         imgUrl: "cw_images/gen-1-8.jpeg",
-        x1: 1050,
-        x2: 1300,
+        x1: 800,
+        x2: 1000,
         y: 40,
       },
       { 
         id: "image-gen-1-11", 
         imgUrl: "cw_images/gen_1-11.jpeg",
-        x1: 1301,
-        x2: 1600,
+        x1: 1000,
+        x2: 1200,
         y: 40,
       },
       {
         id: "image-gen-1-14",
         imgUrl: "cw_images/gen_1_14.jpeg",
-        x1: 1601,
-        x2: 1900,
+        x1: 1200,
+        x2: 1400,
+        y: 40,
+      },
+      {
+        id: "image-psalm-23",
+        imgUrl: "cw_images/psalm_23.jpeg",
+        x1: 1400,
+        x2: 1600,
+        y: 40,
+      },
+
+      {
+        id: "image-psalm-67",
+        imgUrl: "cw_images/psalm_67_rod_long.jpg",
+        x1: 1600,
+        x2:  1800,
+        y: 55,
+      },
+      {
+        id: "image-psalm-82",
+        imgUrl: "cw_images/brett_zeck_unsplash.jpg",
+        x1: 1800,
+        x2:  2000,
         y: 40,
       },
 ]

@@ -13,14 +13,14 @@
 }
 
 	body {
-		font-family:  "Helvetica Neue", tahoma;
+		font-family: "Helvetica Neue", tahoma;
 		background-color: black; 	
 }
-
+/* This is the header on page-2 Lifelines.
 	.lifelines_header {
 		font-family:  "Helvetica Neue", tahoma;
-		background-color: #006699; 	
-
+		/*background-color: #006699; 	*/
+		background-image: linear-gradient(lightblue, blue, darkblue, black);
 		}
 	/* ===========================================
 	Title, Navigation
@@ -67,11 +67,16 @@
 		width: 225px;
 	}
 
+		/*  =================
+		This is page-2 Lifelines
+		====================== */
 	#lifelines {
 		width: 227px;
 		padding: 15px;
 		color: green;
 	}
+
+	
 	
 /*===========================
 	Viewport and Timeline	
@@ -102,10 +107,7 @@
 	New CSS class names for popup items
 	================================ */
 
-	.timeline-text {
-	/*	color: #c2d6d6;*/
-	color: #ffffe6;
-}
+	
 
 /* ================================= 
   Text is not visible on page load - see opacity.
@@ -121,25 +123,49 @@
  /* ===========================
  		Text background styles 
  ============================== */
-	#gen-1-11  {
+	.goldenrod-pink {
+		
+		background-color:rgba(255, 153, 204, 0.65);	
+		font-family: Tisa;
+		font-size: 18px;
+		width: 100px;
+} 
+	.goldenrod-pink p.timeline-text {
+	color: goldenrod;
+}
+
+	#pink-gray {
+		color: pink;
+		background-color: #00001a;
+}
+
+	#green-brown {
+		color: brown;
 		background-color:rgb(153, 230, 0, 0.65);	 
 }
 
-
-	#gen-1-11 p {
-		color: brown;
-}
+ 
 
 	#gen-1-14 {
 		background-color: rgb(0, 77, 77, 0.60);
 }
-	
+	#psalm-23 {
+		background-color: rgb(51, 102, 0, 0.50);
+}
+
+	#psalm-67 {
+		font-size: 18px;
+		background-color: rgb(102,153, 0, 0.65);
+}
+.timeline-text {
+	color: #ffffe6;
+}
 
  /* Text fades in with animate/transition. */
 	.fade-in {
   		opacity: 1.0;
-		transition: opacity 250ms ease-in;
-		transition: 2.3s;
+		/* transition: opacity 250ms ease-in; */
+		/* transition: 1.5s; */
 }
 
  /* ===================================
@@ -147,8 +173,8 @@
  	=================================== */
 	.fade-out {
 		opacity: 0;
-		transition: 2.1s;
-		transition: opacity 250ms ease-out;		
+		transition: 1.5s;
+		/* transition: opacity 250ms ease-out;		 */
 }
 
 /* =======================================
@@ -157,11 +183,37 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 ==========================================  */
  	.viewport {
 		opacity: 0.8;
-		transition: 3.2s;
+		/* transition: 3.2s; */
 
 	}
- 
- 
+ /*  ======================
+		Groovy Scrollbar    
+	 ======================  */
+     /* width */
+ /*
+	 ::-webkit-scrollbar {
+	 width: 20px;
+ }
+*/
+ /* track */
+  /* ::-webkit-scrollbar-track {
+	  box-shadow: inset 0 0 5px #ffffe6;
+	  border-radius: 10px;
+  }
+  */
+
+  /*  Pill  */
+  /* 
+  ::-webkit-scrollbar-thumb {
+	  background-image:  linear-gradient(#509c9c,  #00ffff, #509c9c);
+	  border-radius: 10px;
+  } */
+
+  /* Pill on hover   
+  ::-webkit-scrollbar-thumb:hover {
+	  background-image: radial-gradient( #00ffff, #b3ffff, #00ffff);
+  }  */
+   
 /* ==================================
 	footer styles
 	=============================== */
@@ -221,20 +273,29 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 			color: #c2d6d6;
 		}
 
-		.timeline-item {
-			width: 325px;
-			
-   		}
+		/* .timeline-item {
+			width: 325px;	
+   		} */
 
    		h4 {
 		   width: 500px;
 	   }
+	   #psalm-23 {
+		width: 400px;
+	   }
+
+	   /* ==========================
+	   Page 2, Lifelines
+	   ============================= */
 
 	   	#lifelines {
-			   color: blue;
-			   width: 800px;
-			   font-size: 1.5em;
-			   padding: 60px; 40px;
-		   }
-	   
+
+			 color: blue;  
+			width: 800px;
+			font-size: 1.5em;
+			padding: 60px; 40px;
+	 }
+	  
+
 }
+
