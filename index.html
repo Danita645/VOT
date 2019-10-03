@@ -13,7 +13,13 @@
       Head Closes, Body Begins
      ========================== -->
 
-<body onload="buildTimeline()"> 
+<!-- <body onload="buildTimeline()">  This is moved to .js bottom of file  -->
+<!--  The 2 lines below are an experiement to load an image on-page load  -->
+
+
+
+
+
 
 <header  class="header">
     <!-- <h2 id="page_title">Voices~of~Time</h2> -->
@@ -27,6 +33,9 @@
      ============================== -->
 </header>
 
+<body>
+   <!--  <img src="cw_images/AS66829033.jpeg" onload="loadImage ()" width ="250" height="200"> -->
+
     <div class="viewport" id="js-viewport"> 
     <div class="timeline" id="js-timeline"> 
 
@@ -39,9 +48,14 @@
    </div>
 
    <footer class="footer">
-     <!-- This is a placeholder for later links -->
+      <ul class="books">
+          <li><a href="#on_page_load">Gn</a></li> 
+          <li><a href="#gen-1-8">Ex</a></li>
+          <li><a href="#gen-1-14">Lv</a></li>  
+          <li><a href="#psalm-82">Ps</a></li>  
+          </ul> 
     </footer> 
   <script src ="vot.js"></script>
-  <script src ="vot_images.js"></script>
+<!--  <script src ="vot_images.js"></script>  -->
 </body>
 </html>

@@ -16,12 +16,12 @@
 		font-family: "Helvetica Neue", tahoma;
 		background-color: black; 	
 }
-/* This is the header on page-2 Lifelines.
+ /*This is the header on page-2 Lifelines.*/
 	.lifelines_header {
 		font-family:  "Helvetica Neue", tahoma;
-		/*background-color: #006699; 	*/
+		background-color: #006699; 
 		background-image: linear-gradient(lightblue, blue, darkblue, black);
-		}
+}
 	/* ===========================================
 	Title, Navigation
 	======================================= */
@@ -46,10 +46,9 @@
 	
 	li {
 		list-style-type: none; 
-		padding-top: 10px;
+		padding-top: 5px;
 		padding-left: 14px;
-		padding-bottom: 10px;
-		
+		padding-bottom: 10px;		
 }
  
 	/* Navigation text */
@@ -61,21 +60,21 @@
 		text-decoration: none;
 }
 
-	h4 {
-		color: white;
-		padding: 20px 40px;
-		width: 225px;
-	}
+	h3 {
+		color: #ffffe6;
+		font-size: 20px;
+		padding-left: 7%;
+		padding-top: 4%;
+		max-width: 90%;
+}
 
-		/*  =================
-		This is page-2 Lifelines
-		====================== */
-	#lifelines {
-		width: 227px;
-		padding: 15px;
-		color: green;
-	}
-
+	
+.lifelines {
+	width: 427px;
+	color: #ffffe6;
+	font-size: 18px;
+	padding-left: 7%;
+}
 	
 	
 /*===========================
@@ -98,53 +97,40 @@
 		position: relative;			
 }
 
-	#paragraphs {
+	#paragraphs {	 
 		position: absolute;
 		top: 600px;
 }
 
-/* ==================================
-	New CSS class names for popup items
-	================================ */
-
-	
-
 /* ================================= 
   Text is not visible on page load - see opacity.
     ============================ */
-	.timeline-item {
- 		width: 225px;
+	.blue-green {
+		width: 225px;
   		padding: 12px 15px;
   		position: absolute;
-		background-color: rgb(38, 77, 115, 0.83);  
+		background-color: rgb(38, 77, 115, 0.83);   
 		border-radius: 25px;
 		opacity: 0;
+		color: #e6f2ff;
+}
+
+.gray-pink {
+	width: 225px;
+	  padding: 12px 15px;
+	  position: absolute;
+	background-color: #ffccff;   
+	border-radius: 25px;
+	opacity: 0;
+	color: #333;
 }
  /* ===========================
  		Text background styles 
  ============================== */
-	.goldenrod-pink {
-		
-		background-color:rgba(255, 153, 204, 0.65);	
-		font-family: Tisa;
-		font-size: 18px;
-		width: 100px;
-} 
-	.goldenrod-pink p.timeline-text {
-	color: goldenrod;
-}
 
-	#pink-gray {
-		color: pink;
-		background-color: #00001a;
+ .timeline-text {
+	color: #ffffe6;
 }
-
-	#green-brown {
-		color: brown;
-		background-color:rgb(153, 230, 0, 0.65);	 
-}
-
- 
 
 	#gen-1-14 {
 		background-color: rgb(0, 77, 77, 0.60);
@@ -152,14 +138,12 @@
 	#psalm-23 {
 		background-color: rgb(51, 102, 0, 0.50);
 }
-
 	#psalm-67 {
 		font-size: 18px;
 		background-color: rgb(102,153, 0, 0.65);
 }
-.timeline-text {
-	color: #ffffe6;
-}
+
+
 
  /* Text fades in with animate/transition. */
 	.fade-in {
@@ -185,7 +169,7 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 		opacity: 0.8;
 		/* transition: 3.2s; */
 
-	}
+}
  /*  ======================
 		Groovy Scrollbar    
 	 ======================  */
@@ -230,7 +214,7 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 		display: inline;
 }
 
-	 footer a{
+	 footer a {
 		 color: #00001a;
 		 text-shadow: none;
 	/*	 text-decoration: none; */
@@ -257,8 +241,9 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-    		margin-top: 0px;
-    		padding-left: 25px;
+			margin-top: 0px;
+			padding-left: 25px;
+			padding-bottom: 10px;
 		}
 		.nav li,  
 		.lifelines_nav {
@@ -273,12 +258,13 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 			color: #c2d6d6;
 		}
 
-		/* .timeline-item {
+		 .timeline-item {
 			width: 325px;	
-   		} */
+   		}  
 
-   		h4 {
-		   width: 500px;
+   		h3 {
+		   width: 400px;
+		
 	   }
 	   #psalm-23 {
 		width: 400px;
@@ -288,14 +274,17 @@ Viewport selector was added to fade-in images. It is a work-in-progress.
 	   Page 2, Lifelines
 	   ============================= */
 
-	   	#lifelines {
+		 .lifelines {
+			width: 90%;
+			padding-top: 2%;
+			padding-left: 7%;
+			color: #ffffe6;
+			font-size: 18px;
+	}
 
-			 color: blue;  
-			width: 800px;
-			font-size: 1.5em;
-			padding: 60px; 40px;
-	 }
-	  
-
+	/*=================================
+	
+	===============================*/
+		 
 }
 

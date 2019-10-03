@@ -18,13 +18,13 @@ const timelineImages = [
     x2: 200,
     y: 40,
   },
-  {//gen-1-1
+  /*{//gen-1-1
     id: "image-gen-1-1",
     imgUrl: "cw_images/david_jorre_unsplash.jpg",
     x1: 200,
     x2: 400,
     y:40,
-  },
+  },  
   {
     id: "image-gen-1-2",
     imgUrl:  "cw_images/genesis_bible.jpeg", 
@@ -54,7 +54,7 @@ const timelineImages = [
         x1: 1000,
         x2: 1200,
         y: 40,
-      },
+      }, 
       {
         id: "image-gen-1-14",
         imgUrl: "cw_images/gen_1_14.jpeg",
@@ -83,7 +83,7 @@ const timelineImages = [
         x1: 1800,
         x2:  2000,
         y: 40,
-      },
+      },*/
 ]
 
 /*   ===========================================  
@@ -99,10 +99,10 @@ const timelineImages = [
         Custom javascript attached to the viewport's scroll event listener make images fade in and out.
 
         Notes:  https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-       ===========================================   */
+       ===========================================   
 
     viewportDiv.addEventListener('scroll', function() {
-      
+      */
  /* Track the scroll position of the viewport */
 
  const scrollPosition = viewportDiv.scrollLeft;
@@ -142,7 +142,7 @@ timelineImages.map(function(item) {
     };
   
   
-    });
+   
   }, false);
   
   
@@ -169,6 +169,11 @@ timelineImages.map(function(item) {
         source in the console.log to see how the final
         rendering looks.
       */
+
+
+
+
+      /* This was commented out for sept 16 test */ 
       const html = `
         <div id="${item.id}" class="timeline-image" style="left: ${xPosition}px; top: ${item.y}px;">
         </div>
@@ -184,8 +189,8 @@ timelineImages.map(function(item) {
     });
   };
   
-
-  $("#viewport").delay(6000).animate({"opacity": "1"}, 1700); 
+ /* This was commented out for sept 16 test 
+  $("#viewport").delay(6000).animate({"opacity": "1"}, 1700); */
 
   
   buildTimeline();
